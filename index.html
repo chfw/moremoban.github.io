@@ -5,7 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-		<title> moremoban - Let you focus on coding, instead of logistics</title>
+		<title> moremoban - Pythonistas! Keep on coding</title>
         <style>
 
         html, body {
@@ -15,21 +15,24 @@
             width: 100%;
         }
         .my-block {
-            text-align: center;
             vertical-align: middle;
         }
 		body {
             display: table;
 		    background-image: url('wall-paper.jpg');
         }
+		.image-block{
+		    text-align: center;
+        }
 
 		.big {
-		    font-size: 68px;
+		    font-size: 40px;
 		    color:white;
 		}
 		.medium{
     		font-size: 32px;
-	    	color:white;
+     	    color:gray;
+	        text-align: center;
 		}
 		.inner-block{
 		    background: rgb(54, 54, 54); /* The Fallback */
@@ -39,6 +42,18 @@
 		    color: white;
 		    font-size: 26px;
 		}
+		.features li:before
+		{
+		    content:'\2713';
+		    display:inline-block;
+		    color: black;
+		    padding:0 6px 0 0;
+		}
+		.features li{list-style-type:none;font-size: 28px; color:gray}
+		.feature {
+		   text-align: left;
+		}
+
         </style>
 	</head>
 	<body>
@@ -58,8 +73,18 @@
       </div>
     </div>
   </div>
-	<div class="my-block">
-		<img src="life-cycle.png">
+  <div class="my-block container">
+		  <div class="image-block">
+			  <img src="life-cycle.png">
+		  </div>
+		  <div class="medium">
+			  Tool sets for project scaffolding, meta data synchronization and package publishing:
+		  </div>
+		  <ul class="features">
+			  <li>github integration</li>
+			  <li>travis-ci integration</li>
+			  <li>pypi integration</li>
+		  </ul>
 	</div>
 </body>
 </html>
