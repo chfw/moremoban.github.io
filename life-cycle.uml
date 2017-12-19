@@ -1,0 +1,18 @@
+@startuml
+
+skinparam monochrome true
+skinparam backgroundcolor transparent
+
+state "Your python application" as app
+state "python setup.py publish" as publishing
+state "release to github" as release
+
+[*] --> app : yehua + pypackage-mobans
+app --> app : moban
+app --> publishing
+publishing --> pypi
+publishing --> release : gease
+pypi --> [*]
+release --> [*]
+
+@enduml
