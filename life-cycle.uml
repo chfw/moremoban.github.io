@@ -7,7 +7,7 @@ state "Your python application" as app
 state "python setup.py publish" as publishing
 state "release to github" as release
 
-[*] --> app : yehua + pypackage-mobans
+[*] --> app : yehua + pypi-mobans
 app --> app : moban
 app --> publishing
 publishing --> pypi
